@@ -67,7 +67,7 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroFabrics}
@@ -76,45 +76,102 @@ function Index() {
             width={1600}
             height={900}
           />
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(22,12,11,0.82)_0%,rgba(22,12,11,0.62)_38%,rgba(21,13,12,0.34)_100%)]" />
         </div>
         <div className="animate-floaty absolute -left-24 -top-24 size-96 rounded-full bg-teal/25 blur-3xl" />
         <div
           className="animate-floaty absolute -right-20 top-32 size-80 rounded-full bg-gold/30 blur-3xl"
           style={{ animationDelay: "-3s" }}
         />
-        <div className="relative mx-auto flex min-h-[86vh] max-w-6xl items-center px-6 py-20">
-          <div className="max-w-xl rounded-3xl bg-paper/45 p-10 ring-1 ring-black/5 backdrop-blur-2xl">
-            <div className="animate-rise mb-4 inline-flex items-center gap-2 rounded-full bg-gold/15 px-3 py-1 text-xs font-medium uppercase tracking-wider text-gold">
+
+        <div className="absolute left-6 top-8 hidden rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.24em] text-paper/80 backdrop-blur-md md:inline-flex">
+          Since 1978 • Family shop
+        </div>
+
+        <div className="relative mx-auto grid min-h-[88vh] max-w-6xl items-center gap-10 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="max-w-xl rounded-[30px] border border-white/10 bg-[#f4efe4]/12 p-7 shadow-[0_30px_80px_rgba(14,10,8,0.28)] backdrop-blur-xl sm:p-9 lg:p-10">
+            <div className="animate-rise mb-5 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-gold">
               <span className="size-1.5 rounded-full bg-gold" />
               Festival collection now in store
             </div>
             <h1
-              className="animate-rise font-display text-5xl font-semibold leading-[1.05] tracking-tight text-balance md:text-6xl"
+              className="animate-rise font-display text-5xl font-semibold leading-[0.98] tracking-tight text-balance text-paper md:text-6xl"
               style={{ animationDelay: "80ms" }}
             >
-              Silk you can feel,{" "}
-              <span className="italic text-maroon">from a shop you know.</span>
+              Timeless sarees.
+              <span className="mt-2 block italic text-[#f5d7a3]">Style that feels personal.</span>
             </h1>
             <p
-              className="animate-rise mt-5 max-w-[46ch] text-pretty text-base leading-relaxed text-muted-foreground"
+              className="animate-rise mt-5 max-w-[46ch] text-pretty text-base leading-relaxed text-paper/80"
               style={{ animationDelay: "160ms" }}
             >
-              Three generations of handloom sarees, menswear, womenswear and kids' wear — a short
-              walk from Thakkolam station, priced the way a neighbourhood shop should.
+              Handpicked silk, cotton and festive wear for every family moment — a trusted textile
+              destination near Thakkolam station, with the warm service only a neighbourhood shop can
+              give.
             </p>
+
             <div className="animate-rise mt-8 flex flex-wrap gap-3" style={{ animationDelay: "240ms" }}>
               <a
                 href="#collections"
-                className="rounded-full bg-maroon px-6 py-3 text-sm font-medium text-paper transition-colors duration-200 hover:bg-maroon/85"
+                className="rounded-full bg-[#f4efe4] px-6 py-3 text-sm font-medium text-[#211810] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#fffaf2]"
               >
                 Browse collections
               </a>
               <a
                 href="#contact"
-                className="rounded-full bg-white/50 px-6 py-3 text-sm font-medium text-ink ring-1 ring-black/10 transition-colors duration-200 hover:bg-white/80"
+                className="rounded-full border border-white/20 bg-white/8 px-6 py-3 text-sm font-medium text-paper transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/14"
               >
-                Find us
+                Find the shop
               </a>
+            </div>
+
+            <div className="animate-rise mt-7 flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.16em] text-paper/65" style={{ animationDelay: "300ms" }}>
+              <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5">Silk sarees</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5">Menswear</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5">Kidswear</span>
+            </div>
+          </div>
+
+          <div className="hidden justify-end lg:flex">
+            <div className="w-full max-w-sm rounded-[30px] border border-white/10 bg-[#1a1210]/60 p-5 shadow-[0_25px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-[0.22em] text-[#f9d498]">Live from shop</div>
+                  <div className="mt-2 font-display text-2xl font-semibold text-paper">Now trending</div>
+                </div>
+                <div className="rounded-full border border-[#f3d49c]/35 bg-[#f3d49c]/10 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-[#f5d7a3]">
+                  Open 7 days
+                </div>
+              </div>
+
+              <div className="mt-5 space-y-3">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-paper/60">Top pick</div>
+                  <div className="mt-2 flex items-center justify-between">
+                    <span className="font-display text-xl font-semibold text-paper">Kanchipuram bridal</span>
+                    <span className="rounded-full bg-[#f3d49c]/15 px-2 py-1 text-[10px] font-medium text-[#f7d793]">
+                      ₹2,499
+                    </span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+                    <div className="text-[10px] uppercase tracking-[0.18em] text-paper/60">Families</div>
+                    <div className="mt-2 font-display text-3xl font-semibold text-paper">46Y</div>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+                    <div className="text-[10px] uppercase tracking-[0.18em] text-paper/60">Nearest</div>
+                    <div className="mt-2 font-display text-3xl font-semibold text-paper">5m</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-2xl border border-[#f3d49c]/25 bg-[#f3d49c]/10 p-3 text-sm text-paper/80">
+                <div className="flex items-center gap-2">
+                  <span className="size-2 rounded-full bg-[#f3d49c]" />
+                  Just a short walk from Thakkolam station
+                </div>
+              </div>
             </div>
           </div>
         </div>
